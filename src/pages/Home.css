@@ -1,0 +1,10 @@
+.top-search-container{
+    display: flex;
+    justify-content: space-between;
+    gap:1.5rem;
+    margin: 1.5rem 0;   
+}
+.link-item{
+    color: white;
+    text-decoration: none;
+}
