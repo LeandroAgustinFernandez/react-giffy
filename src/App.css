@@ -32,3 +32,24 @@
 .homeIcon {
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .gif-container {
+    column-count: 3;
+    column-gap: .5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gif-container {
+    column-count: 2;
+    column-gap: .5rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .gif-container {
+    column-count: 1;
+    column-gap: .5rem;
+  }
+}

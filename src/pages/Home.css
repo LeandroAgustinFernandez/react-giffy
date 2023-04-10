@@ -1,10 +1,35 @@
+.container {
+    display: flex;
+    margin-top: 3rem;
+    gap:2rem;
+}
+.container-gifs{
+    min-height: 600px;
+}
+
 .top-search-container{
     display: flex;
-    justify-content: space-between;
-    gap:1.5rem;
-    margin: 1.5rem 0;   
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
 }
 .link-item{
-    color: white;
+    color: white;   
     text-decoration: none;
+}
+
+.popular-title{
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 756px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 568px) {
+    .top-search-container{
+        align-items: center;
+    }
 }
