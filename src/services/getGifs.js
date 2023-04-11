@@ -1,5 +1,5 @@
-export default async function getGifs(keyword) {
-  const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIFFY_API}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`;
+export default async function getGifs(keyword,page = 0,limit = 25) {
+  const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIFFY_API}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=g&lang=en`;
   let res = await fetch(apiUrl);
   res = await res.json();
   const { data } = res;
