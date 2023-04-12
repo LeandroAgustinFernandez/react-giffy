@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { useNearScreen } from "../hooks/useNearScreen";
-import Spinner from './Spinner/Spinner'
+import Spinner from "./Spinner/Spinner";
 
 const Trending = React.lazy(() => import("./Trending"));
 
