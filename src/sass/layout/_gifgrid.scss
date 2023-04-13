@@ -1,0 +1,19 @@
+.gifs {
+  width: 100%;
+  &_container {
+    display: grid;
+    grid: {
+      template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 0.5rem;
+    }
+    align-items: center;
+    .gif-item {
+      max-height: 200px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}

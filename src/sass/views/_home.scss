@@ -1,0 +1,33 @@
+.home {
+  width: 80%;
+  margin: 2rem 4rem;
+  text-align: center;
+  &-title {
+    @include titleconfing(1.7rem, $fontSystem);
+    margin-bottom: 2rem;
+  }
+  .trending {
+    &-title {
+      @include titleconfing(2rem, $fontSystem);
+      margin-bottom: 1rem;
+    }
+    &-top {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+      &--item {
+        text-decoration: none;
+        color: $colorgreen;
+        border: 1px solid $colorgreen;
+        border-radius: 2px;
+        padding: 10px 15px;
+        &:hover {
+          color: $colordark;
+          background-color: $colorlightgreen;
+        }
+      }
+    }
+  }
+}

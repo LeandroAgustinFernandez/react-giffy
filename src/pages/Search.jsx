@@ -31,13 +31,30 @@ const Search = (props) => {
       {isLoading ? (
         <Spinner />
       ) : (
-        <>
-          <h2 style={{ marginBottom: "1rem" }}>
-            {decodeURI(keyword).toLocaleUpperCase()}
+        <section className="search">
+          <h2 className="search-title">
+            RESULT OF: {decodeURI(keyword).toLocaleUpperCase()}
           </h2>
           <ListOfGifs gifs={gifs} />
-          <div id="visor" ref={externalRef}></div>
-        </>
+          <div id="visor" ref={externalRef}>
+            <h5 className="visor-message">Keep Scrolling!</h5>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="68"
+              height="68"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#86f0d4"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-chevrons-down"
+            >
+              <polyline points="7 13 12 18 17 13"></polyline>
+              <polyline points="7 6 12 11 17 6"></polyline>
+            </svg>
+          </div>
+        </section>
       )}
       <br />
     </>

@@ -1,0 +1,29 @@
+.giffy-search {
+    display: flex;
+    align-items: center;
+  input {
+    width: 250px;
+    font: {
+      size: 1.15rem;
+      family: $fontSystem;
+      weight: bold;
+    }
+    border: 1px solid $colorgreen;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    padding: 5px 10px;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 0.35rem 1rem;
+    border: 1px solid $colorgreen;
+    border-radius: 0 2px 2px 0;
+    background-color: $colorgreen;
+    color: $colorwhite;
+    cursor: pointer;
+    &:hover{
+        background-color: $colorlightgreen;
+        color: $colordark;
+    }
+  }
+}

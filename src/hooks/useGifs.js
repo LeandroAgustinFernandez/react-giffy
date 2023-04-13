@@ -30,5 +30,5 @@ export function useGifs(keyword = null) {
     );
   }, [page, setGifs, keywordToUse]);
 
-  return { isLoading, gifs, setPage, loadingNextPage };
+  return { isLoading, gifs, setPage, loadingNextPage, keywordToUse };
 }

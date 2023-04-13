@@ -1,0 +1,5 @@
+@mixin titleconfing($size,$font) {
+  font-family: $font;
+  font-size: $size;
+  color: $colorviolet;
+}

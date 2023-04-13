@@ -15,7 +15,7 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="giffy-search">
       <input onChange={handleInput} type="text" value={keyword} />
       <button>¡Search!</button>
     </form>

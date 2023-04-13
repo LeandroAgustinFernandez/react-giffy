@@ -10,8 +10,8 @@ const Trending = () => {
   }, []);
 
   return (
-    <article className="popular-container">
-      <h3 className="popular-title">Trendings</h3>
+    <article className="trending">
+      <h3 className="trending-title">Trendings</h3>
       <Categories categories={trends} />
     </article>
   );

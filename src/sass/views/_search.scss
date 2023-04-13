@@ -1,0 +1,15 @@
+.search {
+  min-width: 80%;
+  text-align: center;
+  &-title {
+    margin-bottom: 2rem;
+    @include titleconfing(1.7rem, $fontSystem);
+  }
+  .visor-message{
+    margin-top: 1.5rem;
+    @include titleconfing(1.7rem, $fontPacifico);
+  }
+  .feather{
+    color: $colorgreen;
+  }
+}
