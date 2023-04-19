@@ -4,6 +4,8 @@ import { useGifs } from "../hooks/useGifs";
 import { useNearScreen } from "../hooks/useNearScreen";
 import { useCallback, useEffect, useRef } from "react";
 import debounce from "just-debounce-it";
+import { Helmet } from "react-helmet";
+// import useSeo from "../hooks/useSeo";
 
 const Search = (props) => {
   const keyword = props.params.keyword;
@@ -13,6 +15,12 @@ const Search = (props) => {
     externalRef: isLoading ? null : externalRef,
     once: false,
   });
+
+  const title = gifs
+    ? `${gifs.length} resultados de ${decodeURI(keyword)}`
+    : "";
+  const description = `Search results of ${keyword} from GifSearch`;
+  // useSeo({ description: `Search results of ${keyword} from GifSearch`,title });
 
   const debounceHandelNextPage = useCallback(
     debounce(() => {
@@ -28,6 +36,10 @@ const Search = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>GifSearch | {title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       {isLoading ? (
         <Spinner />
       ) : (
