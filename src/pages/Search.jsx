@@ -7,9 +7,9 @@ import debounce from "just-debounce-it";
 import { Helmet } from "react-helmet";
 // import useSeo from "../hooks/useSeo";
 
-const Search = (props) => {
-  const keyword = props.params.keyword;
-  const { isLoading, gifs, setPage } = useGifs(keyword);
+const Search = ({ params }) => {
+  const { keyword, rating } = params;
+  const { isLoading, gifs, setPage } = useGifs(keyword, rating);
   const externalRef = useRef();
   const { show } = useNearScreen({
     externalRef: isLoading ? null : externalRef,

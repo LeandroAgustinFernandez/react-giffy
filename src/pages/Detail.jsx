@@ -11,8 +11,6 @@ const Detail = ({ params }) => {
   // useSeo({ description: `Detail of ${gif?.title}`, title });
   if (!gif) return null;
 
-
-
   return (
     <section className="detail">
       <Helmet>

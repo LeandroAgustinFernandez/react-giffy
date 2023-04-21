@@ -4,7 +4,8 @@ import GifsContext from "../context/GifsContext";
 
 const INITIAL_PAGE = 0;
 
-export function useGifs(keyword = null) {
+export function useGifs(keyword = null, rating) {
+  console.log(rating);
   //   const [gifs, setGifs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingNextPage, setLoadingNextPage] = useState(false);
@@ -15,7 +16,7 @@ export function useGifs(keyword = null) {
 
   useEffect(() => {
     setIsLoading(true);
-    getGifs(keywordToUse)
+    getGifs(keywordToUse,rating)
       .then((res) => setGifs(res))
       .then(() => {
         setIsLoading(false);
@@ -30,5 +31,12 @@ export function useGifs(keyword = null) {
     );
   }, [page, setGifs, keywordToUse]);
 
-  return { isLoading, gifs, setPage, loadingNextPage, keywordToUse, setLoadingNextPage };
+  return {
+    isLoading,
+    gifs,
+    setPage,
+    loadingNextPage,
+    keywordToUse,
+    setLoadingNextPage,
+  };
 }

@@ -18,7 +18,7 @@ function App() {
         </h1>
         <GifsContextProvider>
           <Route path="/" component={Home} />
-          <Route path="/search/:keyword" component={Search} />
+          <Route path="/search/:keyword/:rating?" component={Search} />
           <Route path="/gif/:id" component={Detail} />
         </GifsContextProvider>
         <Footer />
