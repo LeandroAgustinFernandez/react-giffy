@@ -24,13 +24,15 @@ const Search = ({ params }) => {
 
   const debounceHandelNextPage = useCallback(
     debounce(() => {
-      setPage((prevState) => prevState + 1);
+      setPage((prevState) => {
+        console.log(prevState);
+        return prevState + 1;
+      });
     }, 200),
     []
   );
 
   useEffect(() => {
-    console.log(true);
     if (show) debounceHandelNextPage();
   }, [show, debounceHandelNextPage]);
 
